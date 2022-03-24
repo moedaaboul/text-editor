@@ -47,11 +47,11 @@ module.exports = () => {
           },
           {
             src: path.resolve('src/images/logo.png'),
-            size: '1024x1024', // you can also use the specifications pattern
+            size: '96x96', // you can also use the specifications pattern
           },
           {
             src: path.resolve('src/images/logo.png'),
-            size: '1024x1024',
+            size: '96x96',
             purpose: 'maskable',
           },
         ],
@@ -63,6 +63,10 @@ module.exports = () => {
         {
           test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
+        },
+        {
+          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          type: 'asset/resource',
         },
         {
           test: /\.m?js$/,
