@@ -26,11 +26,10 @@ warmStrategyCache({
 
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
-// TODO: Implement asset caching
+// Implemented asset caching
 
 const cacheName = 'static-resources';
 const matchCallback = ({ request }) => {
-  console.log(request);
   return (
     // CSS
     request.destination === 'style' ||
