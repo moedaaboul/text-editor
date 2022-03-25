@@ -36,7 +36,7 @@ module.exports = () => {
         background_color: '#225ca3',
         theme_color: '#225ca3',
         publicPath: '',
-        start_url: '.',
+        start_url: '/',
         orientation: 'portrait',
         display: 'standalone',
         crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
