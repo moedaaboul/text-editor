@@ -24,16 +24,12 @@ export const putDb = async (content) => {
 
 // Added logic for a method that gets all the content from the database
 export const getDb = async () => {
-  try {
-    const editorDb = await openDB('jate', 1);
-    const tx = editorDb.transaction('jate', 'readonly');
-    const store = tx.objectStore('jate');
-    const request = store.get(1);
-    const result = await request;
-    return result.value;
-  } catch (error) {
-    console.error('getDb not implemented');
-  }
+  const editorDb = await openDB('jate', 1);
+  const tx = editorDb.transaction('jate', 'readonly');
+  const store = tx.objectStore('jate');
+  const request = store.get(1);
+  const result = await request;
+  return result.value;
 };
 
 initdb();
